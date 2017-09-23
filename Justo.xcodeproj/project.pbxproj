@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9160B4291F75F67200F24BF8 /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9160B4281F75F67200F24BF8 /* Koloda.framework */; };
+		9160B42B1F75F67600F24BF8 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9160B42A1F75F67600F24BF8 /* pop.framework */; };
 		9172AD841F74905D0053FADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172AD831F74905D0053FADF /* AppDelegate.swift */; };
 		9172AD861F74905D0053FADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172AD851F74905D0053FADF /* ViewController.swift */; };
 		9172AD891F74905D0053FADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9172AD871F74905D0053FADF /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9160B4281F75F67200F24BF8 /* Koloda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Koloda.framework; path = Carthage/Build/iOS/Koloda.framework; sourceTree = "<group>"; };
+		9160B42A1F75F67600F24BF8 /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = Carthage/Build/iOS/pop.framework; sourceTree = "<group>"; };
 		9172AD801F74905D0053FADF /* Justo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Justo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9172AD831F74905D0053FADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9172AD851F74905D0053FADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9160B4291F75F67200F24BF8 /* Koloda.framework in Frameworks */,
+				9160B42B1F75F67600F24BF8 /* pop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9160B4271F75F67200F24BF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9160B42A1F75F67600F24BF8 /* pop.framework */,
+				9160B4281F75F67200F24BF8 /* Koloda.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9172AD771F74905D0053FADF = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +96,7 @@
 				9172AD971F74905D0053FADF /* JustoTests */,
 				9172ADA21F74905D0053FADF /* JustoUITests */,
 				9172AD811F74905D0053FADF /* Products */,
+				9160B4271F75F67200F24BF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +151,7 @@
 				9172AD7C1F74905D0053FADF /* Sources */,
 				9172AD7D1F74905D0053FADF /* Frameworks */,
 				9172AD7E1F74905D0053FADF /* Resources */,
+				9160B42C1F75F69F00F24BF8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +273,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9160B42C1F75F69F00F24BF8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Koloda.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/pop.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks\n/usr/local/bin/carthage copy-frameworks\n/usr/local/bin/carthage copy-frameworks\n/bin/sh";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9172AD7C1F74905D0053FADF /* Sources */ = {
@@ -418,6 +453,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NW8349D2U3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Justo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Parepico.Justo;
@@ -431,6 +470,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NW8349D2U3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Justo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Parepico.Justo;
@@ -516,6 +559,7 @@
 				9172ADAA1F74905D0053FADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9172ADAB1F74905D0053FADF /* Build configuration list for PBXNativeTarget "JustoTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +568,7 @@
 				9172ADAD1F74905D0053FADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9172ADAE1F74905D0053FADF /* Build configuration list for PBXNativeTarget "JustoUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +577,7 @@
 				9172ADB01F74905D0053FADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
