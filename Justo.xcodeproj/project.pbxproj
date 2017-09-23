@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9160B4291F75F67200F24BF8 /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9160B4281F75F67200F24BF8 /* Koloda.framework */; };
 		9160B42B1F75F67600F24BF8 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9160B42A1F75F67600F24BF8 /* pop.framework */; };
 		9172AD841F74905D0053FADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172AD831F74905D0053FADF /* AppDelegate.swift */; };
 		9172AD861F74905D0053FADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172AD851F74905D0053FADF /* ViewController.swift */; };
@@ -16,6 +15,10 @@
 		9172AD8E1F74905D0053FADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9172AD8C1F74905D0053FADF /* LaunchScreen.storyboard */; };
 		9172AD991F74905D0053FADF /* JustoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172AD981F74905D0053FADF /* JustoTests.swift */; };
 		9172ADA41F74905D0053FADF /* JustoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9172ADA31F74905D0053FADF /* JustoUITests.swift */; };
+		91F3D58B1F761356000358BF /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9160B4281F75F67200F24BF8 /* Koloda.framework */; };
+		91F3D58C1F761356000358BF /* Koloda.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9160B4281F75F67200F24BF8 /* Koloda.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91F3D58F1F76135A000358BF /* pop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9160B42A1F75F67600F24BF8 /* pop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91F3D59D1F7619DA000358BF /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F3D59B1F7619DA000358BF /* OverlayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		91F3D58D1F761356000358BF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				91F3D58F1F76135A000358BF /* pop.framework in Embed Frameworks */,
+				91F3D58C1F761356000358BF /* Koloda.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9160B4281F75F67200F24BF8 /* Koloda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Koloda.framework; path = Carthage/Build/iOS/Koloda.framework; sourceTree = "<group>"; };
 		9160B42A1F75F67600F24BF8 /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = Carthage/Build/iOS/pop.framework; sourceTree = "<group>"; };
@@ -51,6 +69,7 @@
 		9172AD9F1F74905D0053FADF /* JustoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9172ADA31F74905D0053FADF /* JustoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustoUITests.swift; sourceTree = "<group>"; };
 		9172ADA51F74905D0053FADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F3D59C1F7619DA000358BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OverlayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9160B4291F75F67200F24BF8 /* Koloda.framework in Frameworks */,
+				91F3D58B1F761356000358BF /* Koloda.framework in Frameworks */,
 				9160B42B1F75F67600F24BF8 /* pop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +134,7 @@
 			children = (
 				9172AD831F74905D0053FADF /* AppDelegate.swift */,
 				9172AD851F74905D0053FADF /* ViewController.swift */,
+				91F3D59B1F7619DA000358BF /* OverlayView.xib */,
 				9172AD871F74905D0053FADF /* Main.storyboard */,
 				9172AD8A1F74905D0053FADF /* Assets.xcassets */,
 				9172AD8C1F74905D0053FADF /* LaunchScreen.storyboard */,
@@ -152,6 +172,7 @@
 				9172AD7D1F74905D0053FADF /* Frameworks */,
 				9172AD7E1F74905D0053FADF /* Resources */,
 				9160B42C1F75F69F00F24BF8 /* ShellScript */,
+				91F3D58D1F761356000358BF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9172AD8E1F74905D0053FADF /* LaunchScreen.storyboard in Resources */,
+				91F3D59D1F7619DA000358BF /* OverlayView.xib in Resources */,
 				9172AD8B1F74905D0053FADF /* Assets.xcassets in Resources */,
 				9172AD891F74905D0053FADF /* Main.storyboard in Resources */,
 			);
@@ -348,6 +370,14 @@
 				9172AD8D1F74905D0053FADF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		91F3D59B1F7619DA000358BF /* OverlayView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91F3D59C1F7619DA000358BF /* Base */,
+			);
+			name = OverlayView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
