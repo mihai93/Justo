@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  Justo
 //
-//  Created by Mihai on 2017-09-21.
-//  Copyright © 2017 Mihai. All rights reserved.
+//  Created by Delia on 2017-09-21.
 //
 
 import UIKit
@@ -62,7 +61,7 @@ extension ViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        UIApplication.shared.open(URL(string: "https://yalantis.com/")!, options: [:], completionHandler: nil)
+        UIApplication.shared.open(URL(string: "https://leilarae.weebly.com/")!, options: [:], completionHandler: nil)
     }
 }
 
@@ -77,7 +76,12 @@ extension ViewController: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: dataSource[Int(index)])
+        let customView = UIView()
+        customView.frame = CGRect.init(x: 0, y: 0, width: 100, height: 200)
+        customView.backgroundColor = UIColor.white //give color to the view
+        customView.center = self.view.center
+        
+        return customView
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
